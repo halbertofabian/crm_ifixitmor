@@ -37,7 +37,18 @@
     <!-- Toastr -->
     <link href="<?php echo HTTP_HOST   ?>assets/js/plugin/toastr/build/toastr.min.css" rel="stylesheet" />
 
+    <!-- DataTables -->
+    <link href="<?php echo HTTP_HOST   ?>assets/plugins/datatables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+    <link href="<?php echo HTTP_HOST   ?>assets/plugins/datatables/buttons.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Responsive datatable examples -->
+    <link href="<?php echo HTTP_HOST   ?>assets/plugins/datatables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css" />
+
+
     <script src="<?php echo HTTP_HOST . 'assets/js/sweetalert.min.js' ?>"></script>
+
+
+
 </head>
 <?php if (isset($_SESSION['session']) && $_SESSION['session']) : ?>
 
@@ -362,13 +373,6 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo HTTP_HOST . 'lista' ?>">
-                                    <i class="fas fa-desktop"></i>
-                                    <p>Hábitos - Plan de acción</p>
-
-                                </a>
-                            </li>
-                            <li class="nav-item">
                                 <a href="<?php echo HTTP_HOST . 'salir' ?>">
                                     <i class="fas fa-exit"></i>
                                     <p>Salir</p>
@@ -411,8 +415,9 @@
 
                 </div>
                 <!-- Footer -->
+                <?php include 'componentes/footer.php' ?>
 
-                <a class='flotante btn btn-dark' data-toggle="modal" data-target="#exampleModal" href='#'>+</a>
+                <!-- <a class='flotante btn btn-dark' data-toggle="modal" data-target="#exampleModal" href='#'>+</a> -->
 
             </div>
 
@@ -481,11 +486,11 @@
                                 </div>
 
                             </div>
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-primary float-right">Guardar</button>
                                 </div>
-                            </div>
+                            </div> -->
 
                         </div>
                     </form>
@@ -520,8 +525,7 @@
         <!-- Chart Circle -->
         <script src="<?php echo HTTP_HOST  ?>assets/js/plugin/chart-circle/circles.min.js"></script>
 
-        <!-- Datatables -->
-        <script src="<?php echo HTTP_HOST  ?>assets/js/plugin/datatables/datatables.min.js"></script>
+
 
         <!-- Bootstrap Notify -->
         <script src="<?php echo HTTP_HOST  ?>assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
@@ -537,9 +541,19 @@
         <!-- Atlantis JS -->
         <script src="<?php echo HTTP_HOST  ?>assets/js/atlantis.min.js"></script>
 
+        <script src="<?php echo HTTP_HOST ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
+        <script src="<?php echo HTTP_HOST ?>assets/plugins/datatables/dataTables.bootstrap4.min.js"></script>
+
+
+        <script src="<?php echo HTTP_HOST ?>assets/plugins/datatables/dataTables.responsive.min.js"></script>
+        <script src="<?php echo HTTP_HOST ?>assets/plugins/datatables/responsive.bootstrap4.min.js"></script>
+
         <!-- Atlantis DEMO methods, don't include it in your project! -->
         <script src="<?php echo HTTP_HOST  ?>assets/js/setting-demo.js"></script>
         <script src="<?php echo HTTP_HOST  ?>assets/js/demo.js"></script>
+        <script src="<?php echo HTTP_HOST  ?>assets/js/plantilla.js"></script>
+
+
         <script>
             $("#tipo_pnr_h").on("click", function() {
                 $(".container-plan").addClass("d-none")
